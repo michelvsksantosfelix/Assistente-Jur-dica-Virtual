@@ -1,0 +1,7 @@
+{
+  "name": "Mara - Assistente Jurídica",
+  "description": "Uma assistente jurídica humanizada e acessível para Whatsapp, especializada em direito previdenciário para público com baixa instrução.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

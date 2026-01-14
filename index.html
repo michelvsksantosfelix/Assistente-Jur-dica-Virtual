@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mara - Gestão Jurídica Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              gold: {
+                500: '#D4AF37',
+                600: '#AA8C2C',
+              },
+              premium: {
+                dark: '#0F172A',
+                card: '#1E293B',
+                light: '#F8FAFC'
+              }
+            }
+          }
+        }
+      };
+      
+      // Polyfill process.env to prevent crashes in browser environments
+      window.process = window.process || { env: { NODE_ENV: 'development' } };
+    </script>
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+      }
+      /* Custom scrollbar for chat */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      /* Premium Glass Effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .dark .glass {
+        background: rgba(30, 41, 59, 0.7);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0?deps=react@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/?deps=react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?deps=react@18.2.0",
+    "uuid": "https://esm.sh/uuid@9.0.1",
+    "@google/genai": "https://esm.sh/@google/genai@0.1.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-premium-light dark:bg-premium-dark text-slate-800 dark:text-slate-100 transition-colors duration-300">
+    <div id="root" class="h-full"></div>
+    <!-- This script tag was missing! It tells the browser to run your React code -->
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
